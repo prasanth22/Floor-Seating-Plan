@@ -1,58 +1,128 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+* {
+  box-sizing: border-box;
+}
+
 body {
+  margin: 0;
+  padding: 20px;
+  background: #f4f6f9;
   font-family: Arial, sans-serif;
 }
 
-/* Floor grid */
+/* =====================================================
+   FLOOR GRID  (SAME LOGIC AS YOUR WORKING DEMO)
+===================================================== */
 .floor {
   display: grid;
- 
-  grid-auto-columns: 80px;
-  gap: 20px;
-  margin: 40px;
+
+  /* EXACT working pattern */
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  grid-auto-rows: 90px;
+  grid-auto-flow: dense;
+
+  gap: 14px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* Base seat */
+/* =====================================================
+   BASE SEAT
+===================================================== */
 .seat {
-  border: 2px solid #333;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+
   font-weight: bold;
+  color: #fff;
+
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-/* Seat types */
-.seat.cabin {
-  width: 160px;
-  height: 120px;
-  background: #d9e8ff;
+/* Hover like flight booking */
+.seat:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.3);
+  z-index: 5;
 }
 
-.seat.big {
-  width: 120px;
-  height: 100px;
-  background: #d9e8ff;
-}
+/* =====================================================
+   SIZE LOGIC (MATCHES YOUR DEMO EXACTLY)
+===================================================== */
 
+/* ---------- C TYPE (SMALL) ---------- */
 .seat.small {
-  width: 80px;
-  height: 80px;
-  background: #d9e8ff;
+  grid-column: span 1;
+  grid-row: span 1;
+
+  background: linear-gradient(145deg, #d6eaf8, #aed6f1);
+  font-size: 12px;
 }
 
-/* Occupied */
+/* ---------- B TYPE (MEDIUM) ---------- */
+.seat.big {
+  grid-column: span 2;
+  grid-row: span 1;
+
+  background: linear-gradient(145deg, #d6eaf8, #aed6f1);
+  font-size: 15px;
+}
+
+/* ---------- A TYPE (LARGE / CABIN) ---------- */
+.seat.cabin {
+  grid-column: span 3;
+  grid-row: span 2;
+
+  background: linear-gradient(145deg, #d6eaf8, #aed6f1);
+  font-size: 20px;
+}
+
+/* =====================================================
+   OCCUPIED STATE
+===================================================== */
 .seat.occupied {
-    background: green;
+  background: linear-gradient(145deg, #43a047, #1b5e20) !important;
+  color: #fff;
 }
 
-/* Tooltip */
+/* =====================================================
+   TOOLTIP
+===================================================== */
 #tooltip {
   position: absolute;
-  background: #000;
+  background: #1e1e1e;
   color: #fff;
-  padding: 8px;
+  padding: 8px 10px;
   font-size: 12px;
-  border-radius: 5px;
+  border-radius: 6px;
+  pointer-events: none;
   display: none;
+  max-width: 220px;
   z-index: 1000;
+}
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+@media (max-width: 768px) {
+  .floor {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    grid-auto-rows: 70px;
+  }
+
+  .seat.cabin {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .seat.big {
+    grid-column: span 2;
+  }
 }

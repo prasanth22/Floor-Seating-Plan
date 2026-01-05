@@ -48,8 +48,9 @@ fetch(sheetURL)
       seat.id = seatId;
       seat.textContent = seatId;
 
-      seat.style.gridRow = row;
-      seat.style.gridColumn = col;
+      seat.style.gridRowStart = row;
+      seat.style.gridColumnStart = col;
+
 
       if (name && name !== "Empty") {
         seat.classList.add("occupied");
