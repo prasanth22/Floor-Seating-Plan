@@ -109,18 +109,18 @@ https://prasanth22.github.io/Floor-Seating-Plan/
 git clone https://github.com/<your-username>/office-floor-seating.git
 cd office-floor-seating
 
-###2️⃣ Update Google Sheet URL
+### 2️⃣ Update Google Sheet URL
 
 Edit script.js:
 
 const sheetURL = "YOUR_PUBLISHED_GOOGLE_SHEET_CSV_URL";
 
-###3️⃣ Push to GitHub
+### 3️⃣ Push to GitHub
 git add .
 git commit -m "Initial office seating layout"
 git push
 
-###4️⃣ Enable GitHub Pages
+### 4️⃣ Enable GitHub Pages
 
 Go to Settings → Pages
 
@@ -128,7 +128,7 @@ Branch: main
 
 Folder: /root
 
-###📱 Responsive Design
+### 📱 Responsive Design
 
 Desktop: Dense airline-style grid
 
@@ -136,13 +136,13 @@ Tablet: Auto-resized grid
 
 Mobile: Stacked layout with readable seats
 
-###🔒 Security & Access
+### 🔒 Security & Access
 
 No authentication required
 
 No sensitive data should be stored
 
-###🧠 Future Enhancements (Optional)
+### 🧠 Future Enhancements (Optional)
 
 Seat search by employee name
 
@@ -152,10 +152,10 @@ Admin drag-and-drop layout
 
 SVG floor blueprint overlay
 
-###📄 License
+### 📄 License
 
 This project is free to use and modify for internal or educational purposes.
 
-###👤 Author
+### 👤 Author
 
 Built as a frontend-only office visualization project using modern CSS Grid techniques and Google Sheets as a lightweight data source.
