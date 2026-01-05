@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Floor grid */
+.floor {
+  display: grid;
+ 
+  grid-auto-columns: 80px;
+  gap: 20px;
+  margin: 40px;
+}
+
+/* Base seat */
+.seat {
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Seat types */
+.seat.cabin {
+  width: 160px;
+  height: 120px;
+  background: #d9e8ff;
+}
+
+.seat.big {
+  width: 120px;
+  height: 100px;
+  background: #d9e8ff;
+}
+
+.seat.small {
+  width: 80px;
+  height: 80px;
+  background: #d9e8ff;
+}
+
+/* Occupied */
+.seat.occupied {
+    background: green;
+}
+
+/* Tooltip */
+#tooltip {
+  position: absolute;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  font-size: 12px;
+  border-radius: 5px;
+  display: none;
+  z-index: 1000;
+}
