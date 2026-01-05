@@ -54,7 +54,7 @@ The seating and employee data comes from a **public Google Sheet**.
 👉 **Replace this with your actual sheet link before sharing**
 
 ### for demo github pages Google Sheet Link 
-https://docs.google.com/spreadsheets/d/e/2PACX-1vSlPbhaTHuBVIhZGhJubSSy_L02DwUAp0jC_rRUrZiMxmVPiXenOqN-pe0lLZyk4y4hvMOaiKGVx21s/pub?output=csv
+[https://docs.google.com/spreadsheets/d/e/2PACX-1vSlPbhaTHuBVIhZGhJubSSy_L02DwUAp0jC_rRUrZiMxmVPiXenOqN-pe0lLZyk4y4hvMOaiKGVx21s/pub?output=csv](https://docs.google.com/spreadsheets/d/1EXSmEE4td3cH4COmRVO14pSpuhPsnmUNq12F8Y0wV-8/edit?gid=0#gid=0)
 
 
 ### 📑 Sheet Columns (Must Match)
